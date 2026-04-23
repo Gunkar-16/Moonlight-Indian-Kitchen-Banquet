@@ -1,15 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moonlight Indian Kitchen</title>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
 </head>
+
 <body>
-  <h1 class="text-amber-300 font-bold">
-    Hello world!
-  </h1></body>
+
+  <div class="absolute inset-0 -z-10">
+    <img src="images/background.jpg" class="w-full h-full object-cover" />
+  </div>
+  <nav class=" bg-black/20 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <a href="#" class="flex items-center">
+        <img src="images/logo.png" class="h-13" alt="Flowbite Logo" />
+        <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Diouma</span> -->
+      </a>
+      <div class="flex md:order-2">
+        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false"
+          class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+          </svg>
+          <span class="sr-only">Search</span>
+        </button>
+        <div class="relative hidden md:block">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+            </svg>
+            <span class="sr-only">Search icon</span>
+          </div>
+          <input type="text" id="search-navbar"
+            class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-4xl bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
+            placeholder="Search...">
+        </div>
+        <button data-collapse-toggle="navbar-search" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+            </svg>
+          </div>
+        </div>
+        <ul
+          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 0 dark:border-gray-700">
+          <li>
+<a href="#" class="nav-link flex items-center gap-2 text-white">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M3 9.75L12 4l9 5.75V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V9.75z"/>
+  </svg>
+  Home
+</a>
+          </li>
+          <li>
+<a href="#" class="nav-link flex items-center gap-2 text-white">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"/>
+  </svg>
+  About Us
+</a>
+          </li>
+          <li>
+ <a href="#" class="nav-link flex items-center gap-2 text-white">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M17.657 16.657L13.414 21a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
+  </svg>
+  Location
+</a>
+          </li>
+          <li>
+          <a href="#menu" class="nav-link flex items-center gap-2 text-white/80 hover:text-white transition">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6" />
+  </svg>
+  Menu
+</a>
+</li>
+              <li>
+<a class="nav-link flex items-center gap-2 text-white/80 hover:text-white transition">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M3 5a2 2 0 012-2h2.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.04l-1.2 1.2a16 16 0 006.364 6.364l1.2-1.2a1 1 0 011.04-.272l4.554 1.518a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+  Contact
+</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="flex justify-end">
+<!-- HERO TEXT OVER IMAGE -->
+<div class="relative z-10 w-full max-w-screen-xl mr-10  px-6 flex justify-end">
+  
+  <div class="text-white text-right max-w-xl mt-7">
+
+
+    <!-- main heading -->
+    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+      Good Food.<br>
+      Good Mood.<br>
+      <span class="text-yellow-400 italic">Great Memories.</span>
+    </h1>
+
+    <!-- description -->
+    <p class="mt-6 text-white/80 text-base md:text-lg">
+      A warm place where spices tell stories, meals bring people together,
+      and every bite feels like home. Fresh ingredients, bold flavors,
+      unforgettable experiences.
+    </p>
+
+    <!-- buttons -->
+    <div class="mt-8 flex gap-4 justify-end">
+      <a href="#menu"
+        class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-medium rounded-lg transition">
+        View Menu
+      </a>
+
+      <a href="#story"
+        class="px-6 py-3 border border-white/40 hover:bg-white/10 rounded-lg transition">
+        Our Story
+      </a>
+    </div>
+
+    <!-- stats -->
+    <div class="mt-12 flex gap-10 text-white/80 text-sm justify-end">
+      <div>
+        <p class="text-xl font-bold text-white">4.2 ★</p>
+        <p>Customer Rating</p>
+      </div>
+      <div>
+        <p class="text-xl font-bold text-white">100+</p>
+        <p>Dishes</p>
+      </div>
+      <div>
+        <p class="text-xl font-bold text-white">10k+</p>
+        <p>Happy Guests</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</main>
+
+</body>
+
 </html>

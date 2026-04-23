@@ -1,4 +1,22 @@
 {
+  "name": "moonlight-indian-kitchen-banquet",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Gunkar-16/Moonlight-Indian-Kitchen-Banquet#readme",
+  "bugs": {
+    "url": "https://github.com/Gunkar-16/Moonlight-Indian-Kitchen-Banquet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gunkar-16/Moonlight-Indian-Kitchen-Banquet.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.4",
     "tailwindcss": "^4.2.4"
