@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/output.css" rel="stylesheet">
   <title>Moonlight Indian Kitchen & Banquet</title>
-  <link id="favicon-link" rel="icon" href="images/icon.png" type="image/x-icon">
+  <link id="favicon-link" rel="icon" href="images/Main Images/icon.png" type="image/x-icon">
+  <script src="main.js"></script>
 </head>
 
 <body class="min-h-screen">
 
   <div class="fixed inset-0 -z-10">
-    <img src="images/background.jpg" class="w-full h-full object-cover" />
+    <img src="images/Main Images/background2.png" class="w-full h-full object-cover" />
   </div>
 
   <!-- NAV -->
@@ -21,7 +22,7 @@
 
       <!-- Logo -->
       <a href="#">
-        <img src="images/logo.png" class="h-12" alt="Logo" />
+        <img src="images/Main Images/logo.png" class="h-12" alt="Logo" />
       </a>
 
       <!-- Right side: search + hamburger -->
@@ -78,6 +79,14 @@
             </a>
           </li>
           <li>
+            <a href="#menu" class="nav-link flex items-center gap-2 text-white py-2 lg:py-0">
+              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+              </svg>
+              Menu
+            </a>
+          </li>
+          <li>
             <a href="#" class="nav-link flex items-center gap-2 text-white py-2 lg:py-0">
               <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 20">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"/>
@@ -90,14 +99,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 21a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
               </svg>
               Location
-            </a>
-          </li>
-          <li>
-            <a href="#menu" class="nav-link flex items-center gap-2 text-white py-2 lg:py-0">
-              <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
-              </svg>
-              Menu
             </a>
           </li>
           <li>
@@ -117,7 +118,7 @@
   <!-- HERO -->
   <main class="relative min-h-[calc(100vh-64px)] flex items-center overflow-hidden">
 
-    <img src="images/background2.png" class="absolute inset-0 w-full h-full object-cover" />
+    <img src="images//Main Images/background2.png" class="absolute inset-0 w-full h-full object-cover" />
     <div class="hero-overlay"></div>
 
     <div class="relative z-10 w-full max-w-screen-xl mx-auto px-6 md:px-10 flex justify-center lg:justify-end">
@@ -201,27 +202,237 @@
       </div>
     </div>
   </main>
+  <section id="menu" class="bg-black relative py-20 px-6 md:px-10 text-white">
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('nav-menu');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
+  <!-- TITLE -->
+  <div class="max-w-screen-xl mx-auto mb-12 text-center">
+    <p class="text-amber-400 uppercase tracking-widest text-sm">Our Menu</p>
+    <h2 class="text-3xl md:text-5xl font-bold mt-2">
+      A World of <span class="text-amber-400 italic">Flavors</span>
+    </h2>
+  </div>
 
-    toggle.addEventListener('click', function() {
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        menu.classList.add('flex', 'flex-col');
-        iconOpen.classList.add('hidden');
-        iconClose.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
-        menu.classList.remove('flex', 'flex-col');
-        iconOpen.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-      }
-    });
-  </script>
+  <!-- CATEGORY GRID -->
+  <div id="menu-categories" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-screen-xl mx-auto">
+
+    <!-- CARD -->
+    <div class="menu-card" data-category="nonveg">
+      <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food1.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Non-Vegetarian</h3>
+        <p>Flavorful & Rich</p>
+      </div>
+    </div>
+
+    <div class="menu-card" data-category="veg">
+      <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food2.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Vegetarian</h3>
+        <p>Fresh & Comforting</p>
+      </div>
+    </div>
+
+    <div class="menu-card" data-category="starters">
+      <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food3.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Non-Vegetarian Starters</h3>
+        <p>Spicy & Crispy</p>
+      </div>
+    </div>
+
+    <div class="menu-card" data-category="rice">
+      <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food4.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Rice & Biryani</h3>
+        <p>Aromatic</p>
+      </div>
+    </div>
+
+    <div class="menu-card" data-category="thali">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food5.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Thali</h3>
+        <p>Complete Meal</p>
+      </div>
+    </div>
+
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food6.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Tandoori</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food7.avif" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Soups</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food8.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Roti & Naan</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+  <!-- rest of these pics below these are AI Generated because I found out I can get sued for using pictures from google. -->
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food9.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Yogurt & Pickles</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food10.png" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Salad & Sides</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food11.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Silky Desserts</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+    <div class="menu-card" data-category="tandoori">
+            <div class="menu-icon">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      d="M8 3v18M8 3c-1.5 2-2 4-2 6s.5 4 2 6M16 3v18M16 3c1.5 2 2 4 2 6s-.5 4-2 6"/>
+  </svg>
+</div>
+      <img src="images/Food Items/food12.jpg" />
+      <div class="menu-overlay"></div>
+      <div class="menu-content">
+        <h3>Beverages</h3>
+        <p>Grilled</p>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <!-- ITEMS SECTION -->
+  <div id="menu-items" class="hidden mt-16 max-w-screen-xl mx-auto">
+
+    <!-- BACK BUTTON -->
+    <button id="back-btn" class="mb-8 text-amber-400 flex items-center gap-2">
+      ← Back to Menu
+    </button>
+
+    <!-- TITLE -->
+    <h3 id="menu-title" class="text-3xl font-bold mb-8"></h3>
+
+    <!-- GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- EMPTY ITEM BOX -->
+      <div class="item-card"></div>
+      <div class="item-card"></div>
+      <div class="item-card"></div>
+      <div class="item-card"></div>
+      <div class="item-card"></div>
+      <div class="item-card"></div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 </html>
