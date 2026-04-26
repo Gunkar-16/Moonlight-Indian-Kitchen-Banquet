@@ -38,3 +38,4 @@ backBtn.addEventListener('click', () => {
   itemsSection.classList.add('hidden');
   categories.classList.remove('hidden');
 });
+

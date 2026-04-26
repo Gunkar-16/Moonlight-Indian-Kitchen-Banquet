@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html{
+  scroll-behavior: smooth;
+}
 input:focus {
   outline: none;
   box-shadow: none;
@@ -206,4 +209,4 @@ input:focus {
   transform: scale(1.08);
 }
 
-/* ================= HOVER MAGIC ================= *
+/* ================= HOVER MAGIC ================= */

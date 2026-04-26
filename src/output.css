@@ -202,11 +202,17 @@
   .static {
     position: static;
   }
+  .sticky {
+    position: sticky;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
   }
   .top-full {
     top: 100%;
@@ -627,6 +633,9 @@
       width: calc(var(--spacing) * 64);
     }
   }
+}
+html {
+  scroll-behavior: smooth;
 }
 input:focus {
   outline: none;
