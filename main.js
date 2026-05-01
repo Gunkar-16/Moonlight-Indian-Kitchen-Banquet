@@ -61,32 +61,32 @@ document.addEventListener('DOMContentLoaded', function () {
     beverages: 'Beverages',
   };
 
-  function openCategory(category) {
-    categories.classList.add('hidden');
-    itemsSection.classList.remove('hidden');
-    title.innerText = categoryNames[category] || category.toUpperCase();
-    // Scroll to menu section smoothly
-    itemsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  // function openCategory(category) {
+  //   categories.classList.add('hidden');
+  //   itemsSection.classList.remove('hidden');
+  //   title.innerText = categoryNames[category] || category.toUpperCase();
+  //   // Scroll to menu section smoothly
+  //   itemsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // }
 
-  cards.forEach(card => {
-    card.addEventListener('click', () => openCategory(card.dataset.category));
-    // Keyboard accessibility
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openCategory(card.dataset.category);
-      }
-    });
-  });
+  // cards.forEach(card => {
+  //   card.addEventListener('click', () => openCategory(card.dataset.category));
+  //   // Keyboard accessibility
+  //   card.addEventListener('keydown', (e) => {
+  //     if (e.key === 'Enter' || e.key === ' ') {
+  //       e.preventDefault();
+  //       openCategory(card.dataset.category);
+  //     }
+  //   });
+  // });
 
-  if (backBtn) {
-    backBtn.addEventListener('click', () => {
-      itemsSection.classList.add('hidden');
-      categories.classList.remove('hidden');
-      categories.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
+  // if (backBtn) {
+  //   backBtn.addEventListener('click', () => {
+  //     itemsSection.classList.add('hidden');
+  //     categories.classList.remove('hidden');
+  //     categories.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //   });
+  // }
 
   // ===== SEARCH =====
   const searchKeywords = {
